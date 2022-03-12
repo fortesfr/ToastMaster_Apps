@@ -11,7 +11,7 @@ st.write("TestHiMeow")
 
 # texter = st.file_uploader("Upload Me", type ='txt')
 
-texter = youtube_transcripter("GVsUOuSjvcg")
-text = texter.read()
+# texter = youtube_transcripter("GVsUOuSjvcg")
+# text = texter.read()
 
-st.write(text)
+# st.write(text)
