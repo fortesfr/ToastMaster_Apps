@@ -8,7 +8,7 @@ from transcriber import youtube_transcripter
 
 st.write("TestHiMeow")
 
-moo = st.text_input(Cut and Paste Video Url Here, value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False)
+moo = st.text_input(label, value="YouTube Url", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False)
 st.write(moo)
 # texter = st.file_uploader("Upload Me", type ='txt')
 video_id = "oGb2oXZzIwY"
