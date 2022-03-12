@@ -9,18 +9,21 @@ from transcriber import youtube_transcripter
 st.header("Download Transcripts from Videos")
 
 url_input = st.text_input(' ', value="YouTube Url")
+
 if url_input:
   texter = youtube_transcripter(url_input)
   st.write(texter)
+ else:
+  st.write("HI")
+  
   
 
 # video_id = "oGb2oXZzIwY"
 # texter = youtube_transcripter(video_id)
 # st.write(moo)
 
-if st.button('Go'):
-  texter = youtube_transcripter(url_input)
-  st.write(texter)
+if st.button('Download'):
+  st.write("DOwnloading!")
   
 # texter = st.file_uploader("Upload Me", type ='txt')
 
