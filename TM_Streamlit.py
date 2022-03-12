@@ -1,7 +1,7 @@
 #Streamlit App
 
 import streamlit as st
-from transcriber import youtube_transcripter
+from transcriber.py import youtube_transcripter
 from youtube_transcript_api import YouTubeTranscriptApi
 from youtube_transcript_api.formatters import JSONFormatter
 import json
