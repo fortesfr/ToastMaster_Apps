@@ -8,7 +8,7 @@ from transcriber import youtube_transcripter
 
 st.header("Download Transcripts from Videos")
 
-moo = st.text_input(value="YouTube Url")
+moo = st.text_input(' ', value="YouTube Url")
 
 # video_id = "oGb2oXZzIwY"
 # texter = youtube_transcripter(video_id)
