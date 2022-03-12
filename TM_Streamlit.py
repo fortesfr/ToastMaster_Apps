@@ -9,7 +9,7 @@ from transcriber import youtube_transcripter
 st.write("TestHiMeow")
 
 # texter = st.file_uploader("Upload Me", type ='txt')
-video_id = "GVsUOuSjvcg"
+video_id = "oGb2oXZzIwY"
 texter = youtube_transcripter(video_id)
 # text = texter.read()
 
