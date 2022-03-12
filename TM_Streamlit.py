@@ -13,7 +13,7 @@ url_input = st.text_input(' ', value="YouTube Url")
 if url_input:
   texter = youtube_transcripter(url_input)
   st.write(texter)
- else:
+else:
   st.write("HI")
   
   
