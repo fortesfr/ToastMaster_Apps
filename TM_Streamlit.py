@@ -8,14 +8,14 @@ from transcriber import youtube_transcripter
 
 st.header("Download Transcripts from Videos")
 
-moo = st.text_input('Input', value="YouTube Url")
+moo = st.text_input(value="YouTube Url")
 
 # video_id = "oGb2oXZzIwY"
 # texter = youtube_transcripter(video_id)
 # st.write(moo)
 
 if st.button('Go'):
-  texter = youtube_transcripter(video_id)
+  texter = youtube_transcripter(moo)
   st.write(texter)
   
 # texter = st.file_uploader("Upload Me", type ='txt')
