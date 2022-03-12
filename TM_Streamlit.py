@@ -3,7 +3,7 @@ import streamlit as st
 # from youtube_transcript_api import YouTubeTranscriptApi
 # from youtube_transcript_api.formatters import JSONFormatter
 # import json
-from transcriber import youtube_transcripter
+import transcriber
 
 
 st.write("TestHiMeow")
@@ -13,4 +13,4 @@ st.write("TestHiMeow")
 text = youtube_transcripter("GVsUOuSjvcg")
 # text = texter.read()
 
-# st.write(text)
+st.write(text)
