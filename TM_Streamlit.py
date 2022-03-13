@@ -8,7 +8,8 @@ from transcriber import youtube_transcripter
 
 st.header("Download Transcripts from Videos")
 
-url_input = st.text_input(' ', value="oGb2oXZzIwY")
+url_input = st.text_input(' ', value="https://www.youtube.com/watch?v=DlZH8f0dc4E")
+url_input = url_input.translate({ord(i): None for i in 'https://www.youtube.com/watch?v='}))
 
 if url_input:
   texter = youtube_transcripter(url_input)
