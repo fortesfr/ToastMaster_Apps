@@ -4,18 +4,24 @@ import streamlit as st
 # from youtube_transcript_api.formatters import JSONFormatter
 # import json
 from transcriber import youtube_transcripter
+from re import search
 
 
 st.header("Download Transcripts from Videos")
 
 url_input_raw = st.text_input(' ', value="https://www.youtube.com/watch?v=GVsUOuSjvcg")
+# https://youtu.be/ER9FlyYr_QA
 
 
 if url_input_raw:
-  url_input = url_input_raw.replace('https://www.youtube.com/watch?v=', '')
-  # url_input = url_input_raw.str()
-  # url_input = url_input.translate({ord(i): None for i in 'https://www.youtube.com/watch?v='})
-  texter = youtube_transcripter(url_input)
+  if search('www.youtube.com', url_input_raw):
+    url_input = url_input_raw.replace('https://www.youtube.com/watch?v=', '')
+    # url_input = url_input_raw.str()
+    # url_input = url_input.translate({ord(i): None for i in 'https://www.youtube.com/watch?v='})
+    texter = youtube_transcripter(url_input)
+  else: 
+    url_input= url_input_raw.replace('https://youtu.be/', '')
+    texter = youtube_transcripter(url_input)
   st.write(texter)
 else:
   st.write("HI")
