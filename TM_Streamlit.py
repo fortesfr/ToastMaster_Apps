@@ -9,9 +9,10 @@ from transcriber import youtube_transcripter
 st.header("Download Transcripts from Videos")
 
 url_input_raw = st.text_input(' ', value="https://www.youtube.com/watch?v=DlZH8f0dc4E")
-url_input = url_input_raw.translate({ord(i): None for i in 'https://www.youtube.com/watch?v='})
 
-if url_input:
+
+if url_input_raw:
+  url_input = url_input_raw.translate({ord(i): None for i in 'https://www.youtube.com/watch?v='})
   texter = youtube_transcripter(url_input)
   st.write(texter)
 else:
