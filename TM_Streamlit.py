@@ -13,8 +13,7 @@ url_input_raw = st.text_input(' ', value="https://www.youtube.com/watch?v=GVsUOu
 
 
 if url_input_raw:
-  if:
-    url_input = url_input_raw.replace('https://www.youtube.com/watch?v=', '')
+  if url_input = url_input_raw.replace('https://www.youtube.com/watch?v=', ''):
     # url_input = url_input_raw.str()
     # url_input = url_input.translate({ord(i): None for i in 'https://www.youtube.com/watch?v='})
     texter = youtube_transcripter(url_input)
