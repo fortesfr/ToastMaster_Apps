@@ -6,11 +6,27 @@ import streamlit as st
 from transcriber import youtube_transcripter
 
 
-st.write("TestHiMeow")
+st.header("Download Transcripts from Videos")
 
+url_input = st.text_input(' ', value="oGb2oXZzIwY")
+
+if url_input:
+  texter = youtube_transcripter(url_input)
+  st.write(texter)
+else:
+  st.write("HI")
+  
+  
+
+# video_id = "oGb2oXZzIwY"
+# texter = youtube_transcripter(video_id)
+# st.write(moo)
+
+if st.button('Download'):
+  st.write("DOwnloading!")
+  
 # texter = st.file_uploader("Upload Me", type ='txt')
-video_id = "GVsUOuSjvcg"
-texter = youtube_transcripter(video_id)
+
 # text = texter.read()
 
-st.write(texter)
+# st.write(texter)
